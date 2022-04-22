@@ -19,6 +19,13 @@ app.get('/node', (req, res) => {
     res.send([explorer1,explorer2,explorer3])
 })
 
+//Query params: recibir parámetros por la url
+//localhost/explorers/jorgevargas
+app.get('/explorers/:explorer', (req, res) => {
+    console.log(req)
+    res.send(req.params)
+})
+
 
 app.listen(port, () => {
     console.log("Server listo!")
